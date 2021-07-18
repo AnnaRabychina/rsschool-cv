@@ -31,6 +31,26 @@ I am motivated to become a web developer. I have analytical skills and strong at
 
 ---
 
+## Code examples
+
+```
+const nav = document.querySelector("#header");
+
+window.addEventListener("scroll",scrollHeader);
+document.addEventListener("DOMContentLoaded",scrollHeader);
+
+function scrollHeader(){
+	let scrollPos = window.scrollY;
+	console.log(pageYOffset);
+	if(scrollPos > 0){
+		nav.classList.add("header-scroll");
+	}else{
+		nav.classList.remove("header-scroll");
+	}
+}
+```
+---
+
 ## Education
 
 **March 2021 - June 2021 IT Laboratory of the Mogilev Regional Development Agency** Mogilev, Belarus  
