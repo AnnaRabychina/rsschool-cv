@@ -1,1 +1,1 @@
-https://AnnaRabychina.github.io/rsschool-cv/cv
+https://AnnaRabychina.github.io/rsschool-cv/
