@@ -37,7 +37,8 @@ figure{
 }
 
 .avatar {
-	border-radius: 50%;
+	width: 80%;
+	border-radius: 50%;	
 }
 
 section{
