@@ -4,15 +4,87 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
+}
+
+h1 {
+  padding: 15px;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+pre {
+   margin-bottom: 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 0;
+}
+
+.header-avatar {
+  display: block;
+  max-width: 30%;
+  margin: 20px;
+}
+
+.avatar {
+  max-width: 80%;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+}
+
+.header-info{
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.navbar {
+	position: absolute;
+	bottom: 0;
+	right: 10%;
+ 	z-index: 9;
+}
+
+.nav-link {
+	padding: 10px;
+	margin-right: 20px;
+	transition: color 0.4s linear;
+}
+
+.nav-link:last-child {
+	margin-right: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	text-shadow: 1px 1px 3px  #929090;
 }
 
 .flex-container {
@@ -20,72 +92,110 @@ body {
 }
 
 aside {
-  width: 30%;
-  padding: 20px;
-  margin: 10px;
+  width: 35%;
+  padding: 0 20px;
   background-color: #f5f5f5;
-  border-radius: 10px;
 }
 
-figure {
+section {
+  border-bottom: 3px solid #f5f5f5;
+}
+
+section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.experience-item {
+  padding: 0 0 10px 15px;
+  position: relative;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
   display: block;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center;
+  width: 10px;
+  height: 10px;
+  background-color:  #d1a759;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
-.avatar {
-  width: 80%;
-  border-radius: 50%;    	
-}
-
-section,
-header {
-  margin-bottom:20px;
-  border-bottom: 2px solid #f5f5f5;
-}
-
-section p {
-  padding: 10px;
+.date{
+  font-weight: 600;
+  padding-right: 10px;
 }
 
 .section-title {
-  text-transform: uppercase;
-  padding: 10px;  
+  padding: 1.5rem;
+  font-weight: 600;  
 }
 
-h1 {
- padding: 10px;
- font-size: 40px;
-}
+.contacts a{
+  color: inherit;
+  text-decoration: none;
+ }
 
 ul {
-  list-style-type: none;
+  margin-left: 10px;
   padding: 10px;
+  list-style-type: none;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.skills p{
+  margin-bottom: 0px;
+}
+
+.skills-title {
+  width: 90px;
+  margin-right: 15px;
+  font-weight: 400;
+}
+
+.skills-list {
+  display: flex;
+  align-items: center;
+}
+
+.skills-list__item {
+  width: 10px;
+  height: 10px;
+  background-color: #d1a759;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: all .3s linear;
+}
+
+.item-gray {
+  background-color: #929090;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 
 main {
-  width: 70%;
+  width: 65%;
   padding: 20px;
-  margin: 10px;
-}
-
-header {
-  text-align: center;
-}
-
-pre {
-  font-size: 14px;
-  background-color: #f5f5f5;
 }
 
 footer {
   display: flex;
   justify-content: space-evenly;
-  margin: 10px 0;
+  padding: 10px 0;
   align-items: center;
   font-size: 14px;
-  border-top: 3px solid #000000;
+  background-color: #f5f5f5;
 }
 
 .footer-logo {
@@ -105,4 +215,94 @@ footer a {
   display: block;
   color: #000000;
   text-decoration: none;
+}
+
+@media(max-width: 992px){
+	.navbar-collapse {
+    background-color: #f5f5f5;
+    opacity: 0.8;
+  }
+
+  .navbar {
+    right: 0;
+  }
+
+  pre code {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media(max-width: 800px){
+   
+  .flex-container{
+    display: block;
+  }
+
+  aside,
+  main {
+    width: 100%;
+  }
+
+  .avatar {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 660px){
+  .flex-container{
+    display: block;
+  }
+
+  aside,
+  main {
+    width: 100%;
+    margin-left: 0;
+  }
+ 
+  .header-avatar {
+    max-width: 40%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+   }
+  
+  h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+   
+  }
+} 
+  @media(max-width: 520px){
+    body{
+      font-size: 14px;
+    }
+   
+    .header{
+      display: block;
+      padding-bottom: 20px;
+    }
+  
+    .header-avatar {
+       max-width: 100%;
+       margin: 0px auto;
+       padding: 20px;
+     }
+
+    .avatar {
+       max-width: 60%; 
+     }
+
+    .navbar {
+      top: 0 ;
+    }
+
+    pre code {
+      font-size: 8px;
+      
+    }
 }
