@@ -4,72 +4,172 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./highlight/styles/atom-one-light.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Anna Rabychina CV</title>
 </head>
-<body>
+<body>  
   <div class="container">
-    <div class="flex-container">
+    <header class="header">
+      <figure  class="header-avatar" >
+        <img class="avatar" src="img/avatar.jpg" alt="My photo" >
+      </figure>
+      <div class = "header-info" >
+        <h1>Anna Rabychina</h1>
+        <h2>Front-End Developer</h2>
+      </div>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <div class="container-fluid">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#summary">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#experience">Work experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#code">Code examples</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="flex-container"> 
       <aside>
-        <figure>
-          <img class="avatar" src="img/avatar.jpg" alt="My photo" >
-        </figure>
         <section>
-          <h2 class="section-title"> Contacts </h2>
-          <ul>
-            <li>Mobile: +375292475950</li>
-            <li>Email: annarabychina@mail.ru</li>
+          <h3 class="section-title"> Contacts </h3>
+          <ul class = "contacts" >
+            <li>
+              <a href="tel:+375292475950"> +375 (29) 2475950 </a> 
+            </li>
+            <li>
+               <a href="mailto:annarabychina@mail.ru">annarabychina@mail.ru</a>
+            </li>
           </ul>
         </section>
         <section>
-          <h2 class="section-title"> Skills </h2>
+          <h3 class="section-title"> Skills </h3>
           <ul>
-            <li> HTML</li>
-            <li> CSS</li>
-            <li> JS Basic</li>
-            <li> SQL</li>
-            <li> VS Code/Sublime Text</li>
-            <li> Git</li>            
+            <li class="skills"> 
+              <p class="skills-title">HTML</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+                </ul>
+            </li>
+            <li class="skills"> 
+              <p class="skills-title">CSS</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+              </ul>
+            </li>
+            <li class="skills"> 
+              <p class="skills-title">JS Basic</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+              </ul>
+            </li>
+            <li class="skills">
+              <p class="skills-title"> SQL</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+              </ul>
+            </li>
+            <li class="skills"> 
+              <p class="skills-title">Bootstrap</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+              </ul>
+            </li>
+            <li class="skills"> 
+              <p class="skills-title">Git</p>
+              <ul class="skills-list">
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+                <li class="skills-list__item item-gray"></li>
+              </ul>
+            </li>            
          </ul> 
         </section>
         <section>
-          <h2 class="section-title"> level of English  </h2>
-          <p> A2</p>
-        </section>        
+          <h3 class="section-title"> Level of English  </h3>
+          <ul>
+            <li >A2</li>
+          </ul>
+         </section> 
       </aside>
       <main>
-        <header>
-          <h1>Anna Rabychina</h1>
-        </header>
         <section>
-          <h2 class="section-title"> about me </h2>
+          <h3 class="section-title"  id="summary"> About me </h3>
           <p>My main goal is to complete the training and get a job offer as a JavaScript developer. I plan to become an effective specialist who improves his knowledge and skills, works well in a team. I am fast-learning and hard-working person. I have good analytical skills and strong attention to detail.</p> 
         </section>
         <section>
-          <h2 class="section-title"> Education </h2>
+          <h3 class="section-title"  id="education"> Education and courses </h3>
+          <p> <span class="date">2021 - Present</span>  Rolling Scopes School, Javascript/Front-End Program</p>
+          <p> <span class="date">March 2021 - June 2021</span> IT Laboratory of the Mogilev Regional Development Agency, Internet technologies</p>
+          <p> <span class="date">2003-2005</span> Institute of Advanced Training and Retraining of Personnel of the Belarusian-Russian University, economist </p>
+          <p> <span class="date">2000-2005</span> Belarusian-Russian University, System Engineer  </p>
+        </section>
+        <section>
+          <h3 class="section-title"  id="experience"> Work experience </h3>
+          <p> <span class="date">2005 - Present</span>  Belarusian Automobile Plant
+            (BelAZ), software engineer </p>
           <ul>
-            <li>March 2021 - June 2021 IT Laboratory of the Mogilev Regional Development Agency, Internet technologies</li>
-            <li>2000-2005 Belarusian-Russian University, System Engineer  </li>
+            <li class= "experience-item"> study of the subject area and software development in the Visual FoxPro environment</li>
+            <li class= "experience-item"> maintenance and prompt introduction of changes to the software at the request of users</li>
+            <li class= "experience-item"> working with databases </li>
+            <li class= "experience-item"> integration of software components</li>
+            <li class= "experience-item"> testing the software being created</li>
           </ul> 
         </section>
         <section>
-          <h2 class="section-title"> Code examples </h2>
+          <h3 class="section-title" id="code"> Code examples </h3>
           <pre>
             <code>
-              const nav = document.querySelector("#header");
+const nav = document.querySelector("#header");
 
-              window.addEventListener("scroll",scrollHeader);
-              document.addEventListener("DOMContentLoaded",scrollHeader);
+window.addEventListener("scroll",scrollHeader);
+document.addEventListener("DOMContentLoaded",scrollHeader);
               
-              function scrollHeader(){
-                let scrollPos = window.scrollY;
-                console.log(pageYOffset);
-                if(scrollPos > 0){
-                  nav.classList.add("header-scroll");
-                }else{
-                  nav.classList.remove("header-scroll");
-                }
-              }
+function scrollHeader(){
+  let scrollPos = window.scrollY;
+    
+  if(scrollPos > 0){
+    nav.classList.add("header-scroll");
+    } else {
+      nav.classList.remove("header-scroll");
+     }
+  }
             </code>
           </pre> 
         </section>
@@ -79,8 +179,11 @@
         <a href="https://rs.school/js/"><img class="footer-logo" src="img/rs_school_js.svg" alt="logo"></a>
         <a href="https://github.com/AnnaRabychina">GitHub</a>
         <time>2021</time>
-        
-     </footer> 
+    </footer> 
   </div> 
+  <script type="text/javascript" src="app.js"></script>
+  <script src="./highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll()</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
